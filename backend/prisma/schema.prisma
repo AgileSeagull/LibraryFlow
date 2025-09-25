@@ -1,0 +1,70 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String   @id @default(uuid())
+  email         String   @unique
+  password      String
+  role          Role     @default(STUDENT)
+  firstName     String
+  lastName      String
+  qrCode        String   @unique
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  entryExitLogs EntryExitLog[]
+}
+
+enum Role {
+  ADMIN
+  STUDENT
+}
+
+model EntryExitLog {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  type      LogType
+  timestamp DateTime @default(now())
+  
+  @@index([userId, timestamp])
+}
+
+enum LogType {
+  ENTRY
+  EXIT
+}
+
+model SystemConfig {
+  id              String   @id @default(uuid())
+  maxCapacity     Int      @default(100)
+  currentOccupancy Int     @default(0)
+  updatedAt       DateTime @updatedAt
+}
+
+model LibraryStatus {
+  id              String   @id @default(uuid())
+  status          LibraryStatusType @default(OPEN)
+  message         String?
+  isAutoScheduled Boolean  @default(false)
+  autoOpenTime    String?  // HH:MM format
+  autoCloseTime   String?  // HH:MM format
+  maintenanceMessage String?
+  updatedAt       DateTime @updatedAt
+  updatedBy       String?  // Admin user ID who updated
+}
+
+enum LibraryStatusType {
+  OPEN
+  CLOSED
+  MAINTENANCE
+}
