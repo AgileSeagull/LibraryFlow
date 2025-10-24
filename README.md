@@ -12,6 +12,7 @@ A comprehensive library crowd management system that provides real-time occupanc
 ## Table of Contents
 
 - [Features](#features)
+- [Screenshots](#screenshots)
 - [Architecture](#architecture)
 - [Quick Start](#quick-start)
 - [Configuration](#configuration)
@@ -47,6 +48,16 @@ A comprehensive library crowd management system that provides real-time occupanc
 - **QR Code System**: Secure entry/exit tracking
 - **Responsive Design**: Mobile-friendly interface
 - **TypeScript**: Full type safety across the stack
+
+## **Screenshots**
+
+### Admin Dashboard
+![Admin Dashboard](screenshots/admin-dashboard.png)
+*Comprehensive admin interface showing occupancy management, analytics, and library status controls*
+
+### Student Dashboard
+![Student Dashboard](screenshots/student-dashboard.png)
+*Student portal with QR code generation, real-time occupancy display, and entry/exit tracking*
 
 ## **Architecture**
 
