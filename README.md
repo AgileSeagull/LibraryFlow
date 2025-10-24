@@ -92,7 +92,7 @@ LibraryFlow/
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/AgileSeagull/LibraryFlow.git
-cd libraryflow
+cd LibraryFlow
 ```
 
 ### 2. Backend Setup
@@ -141,7 +141,7 @@ Create a `.env` file in the `backend` directory:
 DATABASE_URL="file:./dev.db"
 
 # JWT Secret
-JWT_SECRET="your-super-secret-jwt-key-here"
+JWT_SECRET="jwt-key-here"
 
 # Server Configuration
 PORT=5000
