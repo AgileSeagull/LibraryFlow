@@ -52,11 +52,11 @@ A comprehensive library crowd management system that provides real-time occupanc
 ## **Screenshots**
 
 ### Admin Dashboard
-![Admin Dashboard](screenshots/admin-dashboard.png)
+![Admin Dashboard](Admin.jpeg)
 *Comprehensive admin interface showing occupancy management, analytics, and library status controls*
 
 ### Student Dashboard
-![Student Dashboard](screenshots/student-dashboard.png)
+![Student Dashboard](Student.jpeg)
 *Student portal with QR code generation, real-time occupancy display, and entry/exit tracking*
 
 ## **Architecture**
