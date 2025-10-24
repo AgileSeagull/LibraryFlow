@@ -91,7 +91,7 @@ LibraryFlow/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/libraryflow.git
+git clone https://github.com/AgileSeagull/LibraryFlow.git
 cd libraryflow
 ```
 
